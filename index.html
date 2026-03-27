@@ -1,25 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chen Yue's Homepage</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yue Chen | Homepage</title>
+  <style>
+    :root {
+      --bg: #f7f8fb;
+      --card: #ffffff;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --accent: #1d4ed8;
+      --border: #e5e7eb;
+      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Georgia", "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .container {
+      max-width: 860px;
+      margin: 48px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+      padding: 40px 36px;
+    }
+
+    h1 {
+      margin: 0 0 8px 0;
+      font-size: 2.4rem;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    .subtitle {
+      color: var(--muted);
+      font-size: 1.05rem;
+      margin-bottom: 28px;
+    }
+
+    h2 {
+      margin-top: 32px;
+      margin-bottom: 10px;
+      font-size: 1.25rem;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 6px;
+    }
+
+    p {
+      margin: 10px 0;
+      font-size: 1.02rem;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-top: 8px;
+    }
+
+    li {
+      margin: 8px 0;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .contact {
+      margin: 20px 0 28px 0;
+      padding: 14px 18px;
+      background: #f9fafb;
+      border-left: 4px solid var(--accent);
+      border-radius: 10px;
+      font-size: 0.98rem;
+    }
+
+    .footer {
+      margin-top: 36px;
+      color: var(--muted);
+      font-size: 0.95rem;
+      text-align: center;
+    }
+
+    .name-cn {
+      font-size: 1.15rem;
+      color: var(--muted);
+      font-weight: normal;
+      margin-left: 8px;
+    }
+
+    @media (max-width: 640px) {
+      .card {
+        padding: 28px 22px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <h1>Yue Chen 諶越</h1>
-    <p>I'm a Ph.D. student supervised by Prof. Alexander Betts at Cornell University. I am interested in number theory and arithmetic geometry in general. </p>
-    <p>Email: yc2949 at cornell dot edu or chenyue dot 707 at gmail dot com</p>
-    <p>Here is my <a href=cv.pdf>CV</a></p>
-    <p>My office is 111 Malott Hall. </p>
-    <p><strong>Research Statement</strong></p>
-    <p>I am passionate about number theory and arithmetic geometry more broadly. My current project focuses on understanding various Tannakian groups arising from different cohomology theories(specially crystalline, and potentially prismatic) in arithmetic geometry. I am also interested in various aspects of the Langlands program.</p>
-    <p><strong>(pre)Publication</strong>: </p>
-    <p><em>Geometric Height on Flag Varieties in Positive Characteristic</em>, with Haoyang Yuan, <a href="https://arxiv.org/abs/2412.10393">arXiv</a></p>
-    <p><strong>Seminar </strong>: </p>
-    <p>In 2026 Spring I'm organzing <a href="HT_decomposition_and_p_divisible_groups.pdf">Hodge-Tate decomposition of p-divisible group</a></p>
-    <p>“Weil conjectures imply Ramanujan conjecture” 2025 fall at Olivetti Club, Cornell University</p>
-    
-    <p>I love playing basketball, classical music and I'm a big fan of Kanye.</p>
+  <div class="container">
+    <div class="card">
+      <h1>Yue Chen <span class="name-cn">谌越</span></h1>
+      <div class="subtitle">
+        Ph.D. Student in Mathematics, Cornell University
+      </div>
+
+      <p>
+        I am a Ph.D. student at Cornell University, supervised by
+        Prof. Alexander Betts. My research interests lie broadly in
+        number theory and arithmetic geometry.
+      </p>
+
+      <div class="contact">
+        <strong>Email:</strong>
+        yc2949 at cornell dot edu / chenyue dot 707 at gmail dot com<br>
+        <strong>Office:</strong> 111 Malott Hall<br>
+        <strong>CV:</strong> <a href="cv.pdf">Download CV</a>
+      </div>
+
+      <h2>Research</h2>
+      <p>
+        I am particularly interested in Tannakian groups arising from
+        different cohomology theories in arithmetic geometry, especially
+        crystalline cohomology and potentially prismatic cohomology.
+        I am also interested in various aspects of the Langlands program.
+      </p>
+
+      <h2>Publications and Preprints</h2>
+      <ul>
+        <li>
+          <em>Geometric Height on Flag Varieties in Positive Characteristic</em>,
+          with Haoyang Yuan,
+          <a href="https://arxiv.org/abs/2412.10393">arXiv:2412.10393</a>
+        </li>
+      </ul>
+
+      <h2>Seminars and Talks</h2>
+      <ul>
+        <li>
+          Organizer, <em>Hodge–Tate Decomposition of p-divisible Groups</em>,
+          Spring 2026,
+          <a href="HT_decomposition_and_p_divisible_groups.pdf">seminar notes</a>
+        </li>
+        <li>
+          <em>Weil conjectures imply Ramanujan conjecture</em>,
+          Olivetti Club, Cornell University, Fall 2025
+        </li>
+      </ul>
+
+      <h2>Miscellaneous</h2>
+      <p>
+        Outside mathematics, I enjoy playing basketball and listening to
+        classical music.
+      </p>
+
+      <div class="footer">
+        © Yue Chen
+      </div>
+    </div>
+  </div>
 </body>
 </html>
- 
