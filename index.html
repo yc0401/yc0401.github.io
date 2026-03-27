@@ -6,13 +6,13 @@
   <title>Yue Chen | Homepage</title>
   <style>
     :root {
-      --bg: #f7f8fb;
-      --card: #ffffff;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --accent: #1d4ed8;
-      --border: #e5e7eb;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      --bg: #fafaf9;
+      --text: #1c1917;
+      --muted: #57534e;
+      --line: #d6d3d1;
+      --accent: #2563eb;
+      --accent-soft: #eff6ff;
+      --max-width: 900px;
     }
 
     * {
@@ -21,59 +21,97 @@
 
     body {
       margin: 0;
-      font-family: "Georgia", "Times New Roman", serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.7;
+      line-height: 1.75;
     }
 
-    .container {
-      max-width: 860px;
-      margin: 48px auto;
-      padding: 0 20px;
+    .hero {
+      padding: 72px 20px 48px;
+      border-bottom: 1px solid var(--line);
+      background: linear-gradient(to bottom, #ffffff, #fafaf9);
     }
 
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      box-shadow: var(--shadow);
-      padding: 40px 36px;
+    .hero-inner {
+      max-width: var(--max-width);
+      margin: 0 auto;
     }
 
-    h1 {
-      margin: 0 0 8px 0;
-      font-size: 2.4rem;
+    .name {
+      font-size: 3rem;
       font-weight: 700;
-      letter-spacing: 0.2px;
+      margin: 0;
+      letter-spacing: -0.02em;
     }
 
-    .subtitle {
+    .name span {
+      font-weight: 500;
       color: var(--muted);
-      font-size: 1.05rem;
-      margin-bottom: 28px;
+      margin-left: 10px;
+      font-size: 2rem;
+    }
+
+    .tagline {
+      margin-top: 14px;
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .links {
+      margin-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .links a {
+      display: inline-block;
+      padding: 8px 14px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--text);
+      background: white;
+      transition: all 0.2s ease;
+    }
+
+    .links a:hover {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    main {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 42px 20px 80px;
+    }
+
+    section {
+      margin-bottom: 44px;
     }
 
     h2 {
-      margin-top: 32px;
-      margin-bottom: 10px;
-      font-size: 1.25rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 6px;
+      font-size: 1.1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin-bottom: 14px;
     }
 
     p {
       margin: 10px 0;
-      font-size: 1.02rem;
+      font-size: 1.04rem;
     }
 
-    ul {
-      padding-left: 22px;
-      margin-top: 8px;
+    .item {
+      margin-bottom: 14px;
     }
 
-    li {
-      margin: 8px 0;
+    .item-title {
+      font-weight: 600;
     }
 
     a {
@@ -85,101 +123,109 @@
       text-decoration: underline;
     }
 
-    .contact {
-      margin: 20px 0 28px 0;
-      padding: 14px 18px;
-      background: #f9fafb;
-      border-left: 4px solid var(--accent);
-      border-radius: 10px;
-      font-size: 0.98rem;
+    .meta {
+      color: var(--muted);
     }
 
-    .footer {
-      margin-top: 36px;
+    footer {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 24px 20px 50px;
+      border-top: 1px solid var(--line);
       color: var(--muted);
       font-size: 0.95rem;
-      text-align: center;
-    }
-
-    .name-cn {
-      font-size: 1.15rem;
-      color: var(--muted);
-      font-weight: normal;
-      margin-left: 8px;
     }
 
     @media (max-width: 640px) {
-      .card {
-        padding: 28px 22px;
+      .hero {
+        padding-top: 52px;
       }
 
-      h1 {
-        font-size: 2rem;
+      .name {
+        font-size: 2.2rem;
+      }
+
+      .name span {
+        display: block;
+        margin-left: 0;
+        margin-top: 6px;
+        font-size: 1.35rem;
+      }
+
+      .tagline {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
-      <h1>Yue Chen <span class="name-cn">谌越</span></h1>
-      <div class="subtitle">
-        Ph.D. Student in Mathematics, Cornell University
-      </div>
-
-      <p>
-        I am a Ph.D. student at Cornell University, supervised by
-        Prof. Alexander Betts. My research interests lie broadly in
-        number theory and arithmetic geometry.
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="name">Yue Chen <span>谌越</span></h1>
+      <p class="tagline">
+        Ph.D. student in mathematics at Cornell University, working in number theory and arithmetic geometry under the supervision of Prof. Alexander Betts.
       </p>
-
-      <div class="contact">
-        <strong>Email:</strong>
-        yc2949 at cornell dot edu / chenyue dot 707 at gmail dot com<br>
-        <strong>Office:</strong> 111 Malott Hall<br>
-        <strong>CV:</strong> <a href="cv.pdf">Download CV</a>
-      </div>
-
-      <h2>Research</h2>
-      <p>
-        I am particularly interested in Tannakian groups arising from
-        different cohomology theories in arithmetic geometry, especially
-        crystalline cohomology and potentially prismatic cohomology.
-        I am also interested in various aspects of the Langlands program.
-      </p>
-
-      <h2>Publications and Preprints</h2>
-      <ul>
-        <li>
-          <em>Geometric Height on Flag Varieties in Positive Characteristic</em>,
-          with Haoyang Yuan,
-          <a href="https://arxiv.org/abs/2412.10393">arXiv:2412.10393</a>
-        </li>
-      </ul>
-
-      <h2>Seminars and Talks</h2>
-      <ul>
-        <li>
-          Organizer, <em>Hodge–Tate Decomposition of p-divisible Groups</em>,
-          Spring 2026,
-          <a href="HT_decomposition_and_p_divisible_groups.pdf">seminar notes</a>
-        </li>
-        <li>
-          <em>Weil conjectures imply Ramanujan conjecture</em>,
-          Olivetti Club, Cornell University, Fall 2025
-        </li>
-      </ul>
-
-      <h2>Miscellaneous</h2>
-      <p>
-        Outside mathematics, I enjoy playing basketball and listening to
-        classical music.
-      </p>
-
-      <div class="footer">
-        © Yue Chen
+      <div class="links">
+        <a href="cv.pdf">CV</a>
+        <a href="mailto:yc2949@cornell.edu">Cornell Email</a>
+        <a href="mailto:chenyue.707@gmail.com">Gmail</a>
+        <a href="HT_decomposition_and_p_divisible_groups.pdf">Seminar Notes</a>
       </div>
     </div>
-  </div>
+  </header>
+
+  <main>
+    <section>
+      <h2>About</h2>
+      <p>
+        I am a Ph.D. student at Cornell University. My interests lie broadly in number theory and arithmetic geometry.
+      </p>
+      <p class="meta">
+        Office: 111 Malott Hall
+      </p>
+    </section>
+
+    <section>
+      <h2>Research Statement</h2>
+      <p>
+        My current project focuses on understanding various Tannakian groups arising from different cohomology theories in arithmetic geometry, especially crystalline cohomology and potentially prismatic cohomology. I am also interested in various aspects of the Langlands program.
+      </p>
+    </section>
+
+    <section>
+      <h2>Preprints</h2>
+      <div class="item">
+        <span class="item-title"><em>Geometric Height on Flag Varieties in Positive Characteristic</em></span>,
+        with Haoyang Yuan.
+        <a href="https://arxiv.org/abs/2412.10393">arXiv:2412.10393</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Talks and Seminars</h2>
+      <div class="item">
+        <span class="item-title">Organizer</span> —
+        <em>Hodge–Tate Decomposition of p-divisible Groups</em>,
+        Spring 2026.
+        <a href="HT_decomposition_and_p_divisible_groups.pdf">Notes</a>
+      </div>
+      <div class="item">
+        <span class="item-title">Talk</span> —
+        <em>Weil conjectures imply Ramanujan conjecture</em>,
+        Olivetti Club, Cornell University, Fall 2025.
+      </div>
+    </section>
+
+    <section>
+      <h2>Miscellaneous</h2>
+      <p>
+        Outside mathematics, I enjoy basketball and classical music.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    © Yue Chen
+  </footer>
 </body>
 </html>
